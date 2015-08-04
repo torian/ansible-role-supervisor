@@ -1,0 +1,11 @@
+---
+- hosts: all
+  sudo: yes
+
+  vars:
+    - supervisor_services: {}
+
+  roles:
+    - { role: ansible-role-supervisor }
+
+# vi:ts=2:sw=2:et:ft=yaml

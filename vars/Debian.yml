@@ -1,0 +1,10 @@
+---
+
+supervisor_packages:
+  - supervisor
+
+supervisor_prefix:       /etc/supervisor
+supervisor_cfg:          "{{supervisor_prefix}}/supervisord.conf"
+supervisor_services_dir: "{{supervisor_prefix}}/conf.d"
+
+# vi:ts=2:sw=2:et:ft=yaml

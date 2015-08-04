@@ -1,0 +1,5 @@
+*.swp
+*.swa
+*.sw0
+.vagrant
+

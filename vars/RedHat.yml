@@ -1,0 +1,15 @@
+---
+
+supervisor_epel_release: 6
+
+supervisor_epel_package: >
+  https://dl.fedoraproject.org/pub/epel/epel-release-latest-{{supervisor_epel_release}}.noarch.rpm
+
+supervisor_packages:
+  - supervisor
+
+supervisor_prefix:       /etc
+supervisor_cfg:          "{{supervisor_prefix}}/supervisord.conf"
+supervisor_services_dir: "{{supervisor_prefix}}/supervisor/conf.d"
+
+# vi:ts=2:sw=2:et:ft=yaml
