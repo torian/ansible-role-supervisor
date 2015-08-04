@@ -1,0 +1,18 @@
+---
+galaxy_info:
+  author: Emiliano Castagnari
+  description: Ansible role for Supervisor
+  license: Apache
+  min_ansible_version: 1.8
+  platforms:
+  - name: Ubuntu
+    versions:
+    - trusty
+  - name: Amazon Linux
+    versions:
+    - 2015.03
+  categories:
+  - system
+  - monitoring
+dependencies: {}
+
