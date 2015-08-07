@@ -3,6 +3,9 @@
 # Supervisor role
 #
 
+# Enable supervisor service
+supervisor_enabled: true
+
 supervisor_cfg_loglevel: info
 
 # Supervisor commands

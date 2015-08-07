@@ -7,4 +7,6 @@ supervisor_prefix:       /etc/supervisor
 supervisor_cfg:          "{{supervisor_prefix}}/supervisord.conf"
 supervisor_services_dir: "{{supervisor_prefix}}/conf.d"
 
+supervisor_service: supervisor
+
 # vi:ts=2:sw=2:et:ft=yaml
