@@ -13,7 +13,6 @@
 - name: Start and Enable supervisor
   service:
     name="{{supervisor_service}}"
-    state=started
     enabled=yes
   when: supervisor_enabled
 
