@@ -2,8 +2,8 @@
 
 - name: Install Packages (Debian)
   apt:
-    state=present
-    name="{{item}}"
-  with_items: supervisor_packages
+    state: present
+    name: "{{item}}"
+  with_items: "{{supervisor_packages}}"
 
 # vi:ts=2:sw=2:et:ft=yaml

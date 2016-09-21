@@ -17,7 +17,7 @@
 - name: Supervisor configuration
   template:
     src=etc/supervisor/supervisord.conf.j2
-    dest={{supervisor_cfg}}
+    dest="{{supervisor_cfg}}"
     owner="root"
     group="root"
     mode="0644"
@@ -30,7 +30,7 @@
     owner="{{item.value.user|default('root')}}"
     group="{{item.value.user|default('root')}}"
     mode="0640"
-  with_dict: supervisor_services
+  with_dict: "{{supervisor_services}}"
   notify: supervisor restart
 
 # vi:ts=2:sw=2:et:ft=yaml
