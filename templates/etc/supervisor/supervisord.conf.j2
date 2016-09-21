@@ -1,21 +1,10 @@
 ; << Ansible managed file >>
 
 [supervisord]
-logfile     = /var/log/supervisor/supervisord.log
-loglevel    = {{supervisor_cfg_loglevel}}
-childlogdir = /var/log/supervisor
-pidfile     = /var/run/supervisord.pid
-minfds      = 1024
-minprocs    = 200
+{{supervisor_cfg_daemon|default(supervisor_cfg_daemon_default)}}
 
 [supervisorctl]
-serverurl=unix:///var/run/supervisor.sock
-
-; The [include] section can just contain the "files" setting.  This
-; setting can list multiple files (separated by whitespace or
-; newlines).  It can also contain wildcards.  The filenames are
-; interpreted as relative to this file.  Included files *cannot*
-; include files themselves.
+{{supervisor_cfg_ctl|default(supervisor_cfg_ctl_default)}}
 
 [include]
 files = /etc/supervisor/conf.d/*.conf

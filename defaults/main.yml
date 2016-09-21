@@ -8,6 +8,17 @@ supervisor_enabled: true
 
 supervisor_cfg_loglevel: info
 
+supervisor_cfg_daemon_default: |
+  logfile     = /var/log/supervisor/supervisord.log
+  loglevel    = {{supervisor_cfg_loglevel}}
+  childlogdir = /var/log/supervisor
+  pidfile     = /var/run/supervisord.pid
+  minfds      = 1024
+  minprocs    = 200
+
+supervisor_cfg_ctl_default: |
+  serverurl = unix:///var/run/supervisor.sock
+
 # Supervisor commands
 #  It's a hash that represents commands that will be monitored by supervisor,
 #  which in turn, contains a set of parameters that will configure the program
