@@ -3,22 +3,22 @@
 # Supervisor is present on EPEL
 - name: EPEL Repository (RedHat)
   yum:
-    state=present
-    name="{{supervisor_epel_package}}"
-    update_cache=yes
+    state: present
+    name: "{{supervisor_epel_package}}"
+    update_cache: yes
 
 - name: Install Packages (RedHat)
   yum:
-    state=present
-    name="{{item}}"
-    enablerepo="epel"
-  with_items: supervisor_packages
+    state: present
+    name: "{{item}}"
+    enablerepo: "epel"
+  with_items: "{{supervisor_packages}}"
 
 # Fix for Amazon 2015.03
 - name: Amazon pip install supervisor
   pip:
-    state=present
-    name="supervisor"
+    state: present
+    name: "supervisor"
   when: ansible_distribution == 'Amazon'
 
 # vi:ts=2:sw=2:et:ft=yaml
