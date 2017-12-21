@@ -2,11 +2,13 @@
 
 - name: supervisor start
   service: name="{{supervisor_service}}" state=started
+  when: supervisor_started
 
 - name: supervisor stop
   service: name="{{supervisor_service}}" state=stopped
 
 - name: supervisor restart
   service: name="{{supervisor_service}}" state=restarted
+  when: supervisor_started
 
 # vi:ts=2:sw=2:et:ft=yaml
