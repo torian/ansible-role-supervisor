@@ -37,4 +37,10 @@ supervisor_cfg_ctl_default: |
 
 supervisor_services: { }
 
+# The following toggle will start supervisor on a plabook execution
+# or prevent it (even handlers).
+# This might turn handy when building images that should have a
+# clean start (nothing in the data dir)
+supervisor_started: true
+
 # vi:ts=2:sw=2:et:ft=yaml
