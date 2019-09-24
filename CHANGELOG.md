@@ -1,5 +1,9 @@
 # Changelog
 
+## 2019-09-24: 1.2.0
+
+  - Compatibility with Python 3
+
 ## 2017-12-21: 1.1.0
 
   - Ability to skip handler execution. Might be handy when building

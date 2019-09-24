@@ -1,7 +1,7 @@
 ; << Ansible managed file >>
 
 [program:{{item.key}}]
-{% for k,v in item.value.iteritems() %}
+{% for k,v in item.value.items() %}
 {{k}} = {{v}}
 {% endfor %}
 
